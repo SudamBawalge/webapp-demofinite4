@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+      
+<title>Contact</title>
+  <style type="text/css">
+  /*----------- Header Section -----------*/
+   body{
+           font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(bg.jpg);
+    }
+      header {
+            background-color: #024d87;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid #da7426;
+        }
+
+        #logo {
+             height: 80px;
+            width: 200px;
+            margin-left: 30px;
+        }
+
+        #menu-btn {
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+           margin-right: 8%;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            z-index: 10;
+            font-size: 17px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+
+        }
+           nav li {
+            margin: 0 15px;
+        }
+       nav a{
+                color: white;
+                text-decoration: none;
+            }
+             .hover-underline {
+            display: inline-block;
+            position: relative;
+        }
+        .hover-underline::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background-color: orange;
+            bottom: 0;
+            left: 0;
+            transition: width 0.9s;
+        }
+        .hover-underline:hover::before {
+            width: 100%;
+        }
+
+       /*----------- Header For Smaller Screen-----------*/
+
+          @media only screen and (max-width: 675px) and (max-width: 768px) {
+
+        #menu-btn {
+                    display: block;
+                    color: #da7426;
+                }
+            .login {
+                float: none;
+                margin: 10px;
+              }
+               nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 83px;
+                left: 0;
+                width: 100%;
+                background-color: #333;
+                text-align: center;
+            }
+             nav.show {
+                display: flex;
+            }
+
+            nav ul {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav li {
+                margin: 10px 0;
+            }
+            nav a{
+                color: white;
+                text-decoration: none;
+            }
+         
+   }
+
+          /*----------- Header For Smaller Screen Closed-----------*/
+
+   /*----------- Header Section Close-----------*/
+
+.hover-underline {
+    display: inline-block;
+    position: relative; 
+}
+.hover-underline::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: orange;
+    bottom: 0;
+    left: 0;
+    transition: width 0.9s ; 
+}
+.hover-underline:hover::before {
+    width: 100%;
+}
+    .p , a{
+    color:black;
+      font-size: 17px;
+    text-decoration: none;
+    line-height: 5px;
+        }
+        span{
+          color: #da7426;
+        }
+        .media{
+  margin-top: 20px;
+  display: flex;
+ width: 100%;
+  height: 80px;
+  background-color: #024d87;
+  bottom: 0;
+}
+.in{
+  display: flex;
+  align-items: center;
+  margin-left:  10%;
+}
+ .in img {
+      margin-right:  10px;
+        }
+      .name {
+            font-size: 15px;
+            font-weight: bold;
+            margin-left: 0px;
+            color: white;
+        }
+        .name:hover{
+          text-decoration: underline;
+          color: #da7426;
+        }
+         .footer {
+            display: flex;
+            width: 100%;
+            height: 250px;
+            background-color: #eee;
+            margin-top:10px;
+        }
+        .footer div {
+            flex: 1;
+            text-align: center;
+            margin-top: 20px; 
+        }
+        .contact-info {
+            text-align: center;
+        }
+        .symbol {
+            font-size: 50px; /* Adjust the icon size as needed */
+        }
+        .foo2{
+            width: 90%;
+            height: 100%;
+        }
+      .p1{
+      font-size:17px;
+      color: black;
+      }
+         @media (max-width: 675px) {
+          .media{
+         flex-direction: column;
+           height: auto;
+          }
+        .in {
+    margin: 10px 0; /* Adjust margin for better spacing on small screens */
+  }
+
+  .in img {
+    width: 50px; /* Adjust image size for small screens */
+    height: 50px;
+    margin-left: 120px;
+  }
+      .name {
+            font-size: 15px;
+            font-weight: bold;
+            margin-left: 0px;
+            color: white;
+        }
+          .ourcompany , .foo2 {
+            display: none;
+        }
+         .footer:nth-child(1) {
+    display: block; /* Display the first div on small screens */
+    line-height: 40px;
+    height: auto;
+  }
+ .p1{
+      margin-top: 10px;
+      }
+}
+  </style>
+</head>
+<body>
+ <header>
+        <img src="logo.png" alt="Company Logo" id="logo">
+        <div id="menu-btn">&#9776;</div>
+        <nav>
+            <ul>
+                <li class="hover-underline"><a href="index.html">Home</a></li>
+                <li class="hover-underline"><a href="AboutUs.html">About Us</a></li>
+                <li class="hover-underline"><a href="FirstPage.html">Products</a></li>
+                <li class="hover-underline"><a href="Service_Support.html">Service & Support</a></li>
+                <li class="hover-underline"><a href="Contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        
+        </nav>
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('show');
+        });
+    </script>
+        </header>
+
+
+  <h1 align="center">Contact <span>Us</span></h1>
+<center>
+  <p class=p>  Location - Shinde Complex Bavdhan Pune,India.</p><br>
+   <p class=p><a href="mailto:Email - mitali.dharne@finitefour.com">Email - mitali.dharne@finitefour.com</a></p><br>
+     <p class=p> Number  - +91 8411820000</p>
+</center>
+
+ <div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.3630910784386!2d73.77946607567299!3d18.
+      512487169420304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2be5ab0a4ff93%3A0x3f9c3b2f8827ebcf!2sFinite%20four
+      %20office!5e0!3m2!1sen!2sin!4v1696932098269!5m2!1sen!2sin"
+        style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade" width="100%"
+        height="450px" class="map"></iframe>
+    </div>
+
+      <div class="media">
+<div class="in">
+ <img src="in.jpg" alt="Your Image" width="50px" height="50px">
+        <span class="name">FOLLOW US</span>
+</div>
+
+<div class="in">
+ <img src="tube.jpg" alt="Your Image" width="50px" height="50px">
+      <a href="https://youtu.be/6XH7j3YQZIE"><span class="name" >SUBSCRIBE</span></a>
+</div> 
+<div class="in">
+ <img src="mail.png" alt="Your Image" width="50px" height="50px">
+    <a href="mailto: vishal.pawar@finite4.com"><span class="name" >CONNECT</span></a>
+</div>
+</div>
+    
+
+    <footer style="bottom: 0;">
+ <div class="footer">
+        <div class="contact-info">
+            <h3 style="color: black">GET IN TOUCH</h3>
+            <p class="p1">
+                <i class="fas fa-map-marker-alt"></i>
+                First floor, Shinde Complex, Plot11, Shinde Nagar, Pashan-NDA Road, Bavdhan, Pune-411021, Maharashtra, India
+            </p>
+            <p class="p1">
+                <i class="fas fa-phone"></i>
+            mitali.dharne@finitefour.com<br>WhatsApp - +91 8411820000</p>
+        </div>
+        <div class="ourcompany">
+            <h3 style="color: black;">OUR COMPANY</h3>
+            <p class="p1">Customer Support</p>
+            <p class="p1">Global Impact</p>
+            <p class="p1">Technology & Innovation</p>
+        </div>
+        <div>
+
+    
+      <iframe class="foo2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.3630910784386!2d73.77946607567299!3d18.
+      512487169420304!2m3!1f0!2f0!3f0!3m2!i1024!2i768!4f131!3m3!1m2!1s0x3bc2be5ab0a4ff93%3A0x3f9c3b2f8827ebcf!2sFinite%20four
+      %20office!5e0!3m2!1sen!2sin!4v169932098269!5m2!1sen!2sin"></iframe>
+    </div></div></footer>
+</body>
+</html>
